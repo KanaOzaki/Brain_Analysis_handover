@@ -17,6 +17,7 @@
     python make_SN.py
 #### 2)意味表象行列の作成
 例えば、タスクVBの訓練用を作成する場合
+
     python make_srm300.py VB train
 
     
