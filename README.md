@@ -4,10 +4,4 @@
 
 ## 必要な環境
 
-python3.6
-scipy
-numpy 
-pickle
-janome
-gensim
-sklearn
+python3.6　scipy　numpy pickle　janome　gensim　sklearn
