@@ -6,6 +6,8 @@
 * python3.6　scipy　numpy　pickle　janome　gensim　sklearn
 
 ## 実行の流れ
-
-### データの前処理
-#### データの前処理
+### 1.データの前処理(実行過程1)~3)に関しては改めて行う必要なし　./preprocess/)
+#### 1)VB_SNに関してテスト作成
+例 : python make_SN.py
+#### 2)意味表象行列の作成
+例 : python make_srm300.py VB train
