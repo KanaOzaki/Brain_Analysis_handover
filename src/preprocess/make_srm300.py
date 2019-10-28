@@ -88,11 +88,11 @@ def main():
 	phase = args[2] # train/test
 
 	# 語彙ファイル読み込み
-	file_name = '../original_data/TV/jawiki160111S1000W10SG_vocab.txt' #語彙ファイルはTVにあり
+	file_name = '../../original_data/TV/jawiki160111S1000W10SG_vocab.txt' #語彙ファイルはTVにあり
 	word_list = make_word_list(file_name)
 
 	# アノテーションデータ読み込み
-	file_name = '../data/annotation/'+ target + '/annotation_' + target + '_' + phase + '.txt'
+	file_name = '../../data/annotation/'+ target + '/annotation_' + target + '_' + phase + '.txt'
 	annotation_data = read_annotation_data(file_name)
 
 	# アノテーションデータの各サンプルについて単語の意味表象の和を求める.
