@@ -30,11 +30,18 @@
 
     python Standardization_TV.py AN
     
-#### 4)脳活動データの次元削減
+#### 4)脳活動データの次元削減 (閾値はコードの中で指定)
     python Brain_dimension_reduction_VB.py
     python Brain_dimension_reduction_TV.py
     
-### 2.辞書学習 /src/mode/
+### 2.辞書学習 /src/model/
 タスクVB、被験者SN、ボクセル抽出の閾値0.55、基底数900、時間差4秒、全サンプルを使用の場合
-    
+  
     python DL.py VB SN 0.55 900 4 1
+    
+### 3. スパースコーディング /src/model/
+タスクVB、被験者SN、ボクセル抽出の閾値0.55、基底数900、時間差4秒、全サンプルを使用の場合
+
+    python SP.py VB SN 0.55 900 4 1
+    
+### 4. 評価 /src/eval/
