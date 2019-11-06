@@ -45,3 +45,6 @@
     python SP.py VB SN 0.55 900 4 1
     
 ### 4. 評価 /src/eval/
+タスクVB、被験者SN、ボクセル抽出の閾値0.55、基底数900、時間差4秒、全サンプルを使用の場合
+
+    python eval.py VB SN 0.55 900 4 1
