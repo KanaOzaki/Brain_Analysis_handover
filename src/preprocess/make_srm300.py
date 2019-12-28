@@ -57,12 +57,14 @@ def make_word2vec(sentence, word_list):
 
 	"""
 	1文とword_listを受け取り、word_listに含まれている、かつ、動詞形容詞名刺のみを分散表現にしてそれらの
-	和をとったベクトルを返す
+	平均をとったベクトルを返す
 	"""
 
 	# まずは文を携帯素解析
 	t = Tokenizer()
 	W2V_sum=np.zeros(300)
+	# 単語の数をカウントする
+	counter = 0
 
 	for token in t.tokenize(sentence, stream=True):
 		hinshi = token.part_of_speech.split(',')[0]
@@ -74,11 +76,14 @@ def make_word2vec(sentence, word_list):
 			if(token.base_form in word_list):
 				# 分散表現の辞書の中になかったら、それは無視する.
 				try:
+					counter += 1
 					W2V_sum += W2V_model[token.base_form]
 				except:
 					continue
 
-	return (W2V_sum)
+	#平均ベクトルを求める
+	W2V_ave = W2V_sum / float(counter)
+	return (W2V_ave)
 
 def main():
 
